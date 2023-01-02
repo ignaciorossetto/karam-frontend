@@ -8,8 +8,17 @@ import './ItemDetail.css'
 
 const ItemDetail = ({ singleProduct }) => {
 
-  const { addToCart, deleteItemInfo, cart, setDeleteItemInfo, deleteAllCartBool, deleteAllItems, setDeleteAllCartBool, setDeleteAllItems } = useContext(CartContext);
-  let [sstock , setSstock] = useState(singleProduct.stock)
+  const { isInCart, addToCart, deleteItemInfo, cart, setDeleteItemInfo, deleteAllCartBool, deleteAllItems, setDeleteAllCartBool, setDeleteAllItems } = useContext(CartContext);
+  let [stock , setStock] = useState(singleProduct.stock)
+
+  useEffect(()=>{
+      if(isInCart(singleProduct.id)){
+        const cartItem = cart.filter(prod => prod.id === singleProduct.id)
+        const newStock = singleProduct.stock - cartItem[0].quantity
+        setStock(newStock)
+      }
+  }, [])
+
   const handleClickedChild = (value) => {
     addToCart(
       singleProduct.id,
@@ -17,21 +26,20 @@ const ItemDetail = ({ singleProduct }) => {
       singleProduct.price,
       singleProduct.image,
       value,
-      singleProduct.id
     );
-    setSstock(singleProduct.stock -= value)
+    setStock(stock -= value)
   };
 
   useEffect(()=>{
     if(deleteItemInfo === singleProduct.id){
-      setSstock(singleProduct.stock += 1)
+      setStock(stock += 1)
       setDeleteItemInfo()
     }
     if(deleteAllCartBool === true) {
       const index = deleteAllItems.findIndex(({id})=> id === singleProduct.id)
       if(index !== -1){
         const value = deleteAllItems[index].quantity
-        setSstock(singleProduct.stock += value)
+        setStock(stock += value)
       }
       setDeleteAllCartBool(false)
       setDeleteAllItems([])
@@ -63,8 +71,8 @@ const ItemDetail = ({ singleProduct }) => {
           <Card.Title as="h1">{singleProduct.name}</Card.Title>
           <Card.Title as="h4">{singleProduct.medidas}</Card.Title>
           <Card.Text>PRECIO: ${singleProduct.price.toLocaleString()}</Card.Text>
-          <Card.Text>Stock: {singleProduct.stock}</Card.Text>
-          <ItemCounter stock={sstock} handler={handleClickedChild}/>
+          <Card.Text>Stock: {stock}</Card.Text>
+          <ItemCounter stock={stock} handler={handleClickedChild}/>
         </Card.Body>
       </Card>
     </div>
