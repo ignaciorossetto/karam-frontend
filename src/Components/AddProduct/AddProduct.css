@@ -1,0 +1,15 @@
+.addProductContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+
+@media screen and (min-width:300px) and (max-width:585px) {
+    .addProductContainer{
+        flex-direction: column;
+        align-items: center;
+
+    }
+}

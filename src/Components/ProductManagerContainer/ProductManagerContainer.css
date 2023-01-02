@@ -1,0 +1,23 @@
+.ProductManagerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filterContaier {
+  width: 60%;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width:300px) and (max-width:1235px) {
+    .filterContaier{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:700px) {
+    .filterContaier{
+        height: auto;
+    }
+}

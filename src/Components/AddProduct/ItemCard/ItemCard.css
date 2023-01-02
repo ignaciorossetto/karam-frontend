@@ -1,0 +1,13 @@
+.itemCardContainer{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+
+@media screen and (min-width:300px) and (max-width:585px) {
+    .itemCardContainer{
+        align-self: center;
+        width: 100%;
+    }
+}

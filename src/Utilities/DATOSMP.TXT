@@ -1,0 +1,28 @@
+COMPRADOR: TT432023
+EMAIL: test_user_97231199@testuser.com
+PASSWORD: dSv6AwUFpR
+
+
+VENDEDOR: ignaciorossetto
+EMAIL: ignaciorossetto@hotmail.com
+Credenciales de prueba:
+    -   Public Key: TEST-172e347d-e7d9-4bda-bc4a-a998384866fc
+    -   Access Token: TEST-3317053809826160-071915-6c1a6fcf587217ab83196cec3ec19117-65474109
+
+
+VENDEDOR: TETE7616414
+EMAIL: test_user_62748332@testuser.com
+PASSWORD: G7ZyPuZ7cf
+Número de la aplicación:  8125028252532334
+Credenciales de prueba:
+    -   Public Key: TEST-426d1bf0-e2c8-4b98-bd4b-9f891c7cf31a
+    -   Access Token: TEST-8125028252532334-111311-2cedcea370aeadf162b1b5f60914673f-1238153828
+
+
+
+TARJETAS PRUEBA
+
+NUMERO:                 5031755734530604
+CODIGO DE SEGURIDAD:    123
+FECHA DE CADUCIDAD:     11/25
+ESTADO DE PAGO:         APRO / OTHE / CONT

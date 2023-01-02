@@ -1,0 +1,9 @@
+.cardImgM:hover{
+    transition: all 0.35s;
+    transform: scale(1.05);
+}
+
+.form-check-input:checked{
+    background-color: red!important;
+    border-color: black!important;
+}

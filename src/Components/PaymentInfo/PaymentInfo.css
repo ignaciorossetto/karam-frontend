@@ -1,0 +1,38 @@
+.formadepagoContainer{
+    width: 365px
+}
+
+.paymentContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:0px 25px;
+}
+
+@media screen and (min-width:300px) and (max-width:750px) {
+    .accordion{
+        width:300px
+    }
+
+    .cartSummaryPayment{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:300px) and (max-width:350px) {
+    .accordion{
+        width:300px
+    }
+
+    .cartSummaryPayment{
+        display: none;
+    }
+
+    .paymentContainer{
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin:0px 25px;
+    }
+
+}

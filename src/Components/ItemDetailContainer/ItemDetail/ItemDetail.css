@@ -1,0 +1,21 @@
+
+  .itemDetail{
+    display: flex;
+    flex-direction:row;
+    width: 25rem;
+    border: none!important;
+    margin: 0px 15px;
+  }
+
+@media screen and (min-width:351px) and (max-width:775px) {
+    .itemDetail{
+        width: 250px;
+    }
+    
+}
+@media screen and (min-width:300px) and (max-width:350px) {
+    .itemDetail{
+        width: 220px;
+    }
+    
+}

@@ -1,0 +1,24 @@
+.itemList {
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  grid-template-rows: auto;
+  gap: 10px;
+  justify-content: center
+}
+
+@media screen and (min-width: 700px) and (max-width: 1055px) {
+    .itemList{
+        grid-template-columns: 350px 350px;
+    }
+}
+@media screen and (min-width: 350px) and (max-width: 700px) {
+    .itemList{
+        grid-template-columns: 300px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 349px) {
+    .itemList{
+        grid-template-columns: 200px;
+    }
+}

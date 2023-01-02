@@ -1,0 +1,28 @@
+.shopCart{
+    background-color: transparent!important;
+    color: black!important;
+    border: none!important;
+    --bs-btn-padding-x: 0rem!important;
+    --bs-btn-padding-y: 0rem!important;
+}
+
+@media screen and (min-width:350px) and (max-width:479px) {
+    .totalPerProductModal{
+        display: none;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:349px) {
+    .totalPerProductModal{
+        display: none;
+    }
+    .cerrarModal{
+        display: none!important;
+    }
+
+    .card div img{
+        height: 80%!important;
+    }
+
+
+}
