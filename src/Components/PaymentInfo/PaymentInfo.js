@@ -59,7 +59,8 @@ const PaymentInfo = () => {
           estado: "TRANSFERENCIA A CONFIRMAR",
         },
       };
-      await axios.post("https://karamhechoamano-backend.onrender.com/api/carts/", object);
+      const response = await axios.post("https://karamhechoamano-backend.onrender.com/api/carts/", object);
+      console.log(response);
       try {
         await axios.patch("https://karamhechoamano-backend.onrender.com/api/products/sale", {"products": object.products})
         window.open(
@@ -68,14 +69,14 @@ const PaymentInfo = () => {
         );
         deleteClientInfo();
         deleteAllCart();
-        navigate(`/paymentresult?status=in_process&orderdnr=54654asdasdasd`);
+        navigate(`/paymentresult?status=transfer_in_process&orderdnr=${response.data.id}`, {state: {data: response.data}});
         return;
       } catch (error) {
         const responseProducts = error.response.data.products
         for (const element of responseProducts) {
           deleteItemAll(element.id)
         }
-        navigate(`/paymentresult?status=failed&orderdnr=54654asdasdasd`, responseProducts);
+        navigate(`/paymentresult?status=stock_failed&orderdnr=${response.data.id}`, {state: {data : responseProducts}});
         return
       }
     }
