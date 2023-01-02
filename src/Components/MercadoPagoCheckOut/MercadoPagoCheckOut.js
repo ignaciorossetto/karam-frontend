@@ -18,7 +18,7 @@ export default function Checkout() {
   useEffect(() => {
     const getPrefIf = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/mercadopago", {
+        const response = await fetch("https://karamhechoamano-backend.onrender.com/api/mercadopago", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -59,7 +59,7 @@ export default function Checkout() {
         payment_id:''
       },
     };
-    await axios.post("http://127.0.0.1:5000/api/carts/", object);
+    await axios.post("https://karamhechoamano-backend.onrender.com/api/carts/", object);
   
 
   };

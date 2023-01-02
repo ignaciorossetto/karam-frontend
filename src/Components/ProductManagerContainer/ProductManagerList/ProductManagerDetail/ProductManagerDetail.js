@@ -16,7 +16,7 @@ const ProductManagerDetail = ({ item }) => {
     const obj = {
       disponible: !e.target.checked
     }
-    await axios.put(`http://127.0.0.1:5000/api/products/${item.id}`, obj)
+    await axios.put(`https://karamhechoamano-backend.onrender.com/api/products/${item.id}`, obj)
   }
 
 

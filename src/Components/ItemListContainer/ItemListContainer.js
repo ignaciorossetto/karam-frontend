@@ -16,7 +16,7 @@ function ItemListContainer() {
   useEffect(() => {
     
     const fetchProducts = async() => {
-      const response = await fetch(`http://127.0.0.1:5000/api/products/?category=${category}`);
+      const response = await fetch(`https://karamhechoamano-backend.onrender.com/api/products/?category=${category}`);
       const data = await response.json()
       const data1 = data.filter((prod)=> prod.disponible === true)
       setProductList(data1.sort((a, b)=> a.product_id - b.product_id))

@@ -12,7 +12,7 @@
 .nosotros__main__img1 {
     display: flex;
     align-items: center;
-    background-image: url('http://127.0.0.1:5000/static/images/multimedia/galeria/bordado.jpg');
+    background-image: url('https://karamhechoamano-backend.onrender.com/static/images/multimedia/galeria/bordado.jpg');
     background-size: cover;
     background-position: bottom;
     grid-area: img1;
@@ -23,7 +23,7 @@
 .nosotros__main__img2 {
     display: flex;
     align-items: center;
-    background-image: url('http://127.0.0.1:5000/static/images/multimedia/galeria/bordado1.jpg');
+    background-image: url('https://karamhechoamano-backend.onrender.com/static/images/multimedia/galeria/bordado1.jpg');
     background-size: cover;
     background-position: bottom;
     grid-area: img2;

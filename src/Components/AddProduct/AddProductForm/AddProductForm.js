@@ -18,7 +18,7 @@ const AddProductForm = (param) => {
         obj[pair[0]] = pair[1];
       }
       await axios.post(
-        "http://localhost:5000/api/products",
+        "http://https://karamhechoamano-backend.onrender.com/api/products",
         obj,
         {
           headers: {

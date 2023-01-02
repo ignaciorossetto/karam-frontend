@@ -14,10 +14,10 @@ const DeleteProduct = () => {
   const fetchProducts = async () => {
     let response;
     if (itemListFilter === "Todos") {
-      response = await fetch(`http://127.0.0.1:5000/api/products`);
+      response = await fetch(`https://karamhechoamano-backend.onrender.com/api/products`);
     } else {
       response = await fetch(
-        `http://127.0.0.1:5000/api/products?category=${itemListFilter.toLowerCase()}`
+        `https://karamhechoamano-backend.onrender.com/api/products?category=${itemListFilter.toLowerCase()}`
       );
     }
     const data = await response.json();

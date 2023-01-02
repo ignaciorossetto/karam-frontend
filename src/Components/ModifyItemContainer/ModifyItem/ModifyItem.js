@@ -63,7 +63,7 @@ const ItemDetail = ({ singleProduct }) => {
     const newForm = new FormData()
     newForm.append('name', e.target.files[0].name)
     newForm.append('file', e.target.files[0])
-    const response = await axios.patch('http://127.0.0.1:5000/api/products', newForm)
+    const response = await axios.patch('https://karamhechoamano-backend.onrender.com/api/products', newForm)
     setNewImage(response.data)
   }
   
@@ -76,7 +76,7 @@ const ItemDetail = ({ singleProduct }) => {
       stock: newStock,
       disponible: newAvailability
     }
-    const response = await fetch(`http://127.0.0.1:5000/api/products/${singleProduct.id}`, {
+    const response = await fetch(`https://karamhechoamano-backend.onrender.com/api/products/${singleProduct.id}`, {
       method: 'PUT',
       body: JSON.stringify(obj),
       headers: {
@@ -106,7 +106,7 @@ const ItemDetail = ({ singleProduct }) => {
       /* Read more about isConfirmed, isDenied below */
     if (result.isDenied) {
         Swal.fire(`Producto ${singleProduct.name} Eliminado!`).then(async (res)=>{
-          await axios.delete(`http://127.0.0.1:5000/api/products/${singleProduct.id}`)
+          await axios.delete(`https://karamhechoamano-backend.onrender.com/api/products/${singleProduct.id}`)
           navigate('/admin')
         })
       }

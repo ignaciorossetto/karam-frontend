@@ -59,9 +59,9 @@ const PaymentInfo = () => {
           estado: "TRANSFERENCIA A CONFIRMAR",
         },
       };
-      await axios.post("http://127.0.0.1:5000/api/carts/", object);
+      await axios.post("https://karamhechoamano-backend.onrender.com/api/carts/", object);
       try {
-        await axios.patch("http://127.0.0.1:5000/api/products/sale", {"products": object.products})
+        await axios.patch("https://karamhechoamano-backend.onrender.com/api/products/sale", {"products": object.products})
         window.open(
           `https://wa.me/5493516330434?text=${whatsappMessage()}`,
           "_blank"

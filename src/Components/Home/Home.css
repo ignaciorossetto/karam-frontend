@@ -67,21 +67,21 @@
 
 .galeriahome__img1 {
     grid-area: galeriahome__img1;
-    background-image: url('http://127.0.0.1:5000/static/images/multimedia/galeria/bolso.jpg');
+    background-image: url('https://karamhechoamano-backend.onrender.com/static/images/multimedia/galeria/bolso.jpg');
     background-size: cover;
     background-position: center 80%;
 }
 
 .galeriahome__img2 {
     grid-area: galeriahome__img2;
-    background-image: url('http://127.0.0.1:5000/static/images/multimedia/galeria/general.jpg');
+    background-image: url('https://karamhechoamano-backend.onrender.com/static/images/multimedia/galeria/general.jpg');
     background-size: cover;
     background-position: left 10%;
 }
 
 .galeriahome__img3 {
     grid-area: galeriahome__img3;
-    background-image: url('http://127.0.0.1:5000/static/images/multimedia/galeria/ropa.jpg');
+    background-image: url('https://karamhechoamano-backend.onrender.com/static/images/multimedia/galeria/ropa.jpg');
     background-size: cover;
     background-position: right 49%;
     align-content: center

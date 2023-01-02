@@ -21,7 +21,7 @@ const Filters = (param) => {
       showLoaderOnConfirm: true,
       preConfirm: (perc) => {
         const obj = {percentage: perc}
-        return axios.put('http://127.0.0.1:5000/api/products', obj)
+        return axios.put('https://karamhechoamano-backend.onrender.com/api/products', obj)
       },
       allowOutsideClick: () => !Swal.isLoading()
     }).then((result) => {

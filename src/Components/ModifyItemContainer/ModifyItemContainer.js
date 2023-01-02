@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
   const [singleProduct, setSingleProduct] = useState([]);
 
   const fetchSingleDoc = async () => {
-    const response = await fetch(`http://127.0.0.1:5000/api/products/${id}`)
+    const response = await fetch(`https://karamhechoamano-backend.onrender.com/api/products/${id}`)
     const data = await response.json()
     setSingleProduct(data);
   };

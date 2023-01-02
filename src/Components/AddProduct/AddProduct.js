@@ -11,7 +11,7 @@ const AddProduct = () => {
     name: 'Nombre Ejemplo',
     price: 10000,
     medidas: 'Medidas 60x60cm',
-    image: 'http://127.0.0.1:5000/static/images/multimedia/bolsos/bolso__6.jpeg'
+    image: 'https://karamhechoamano-backend.onrender.com/static/images/multimedia/bolsos/bolso__6.jpeg'
   })
 
   let [newName, setNewName] = useState(singleProduct.name)
@@ -65,7 +65,7 @@ const AddProduct = () => {
     const newForm = new FormData()
     newForm.append('name', e.target.files[0].name)
     newForm.append('file', e.target.files[0])
-    const response = await axios.patch('http://127.0.0.1:5000/api/products', newForm)
+    const response = await axios.patch('https://karamhechoamano-backend.onrender.com/api/products', newForm)
     setNewImage(response.data)
   }
   
